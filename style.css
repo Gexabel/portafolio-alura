@@ -1,0 +1,403 @@
+/* General */
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 401;
+    margin: 0;
+    padding: 0;
+    background-color: #D8DFE8;
+  }
+  
+  /* Encabezado */
+  .header {
+    background-color: #0A3871;
+    padding: 20px;
+    color: white;
+  }
+  
+  .header__nav {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+
+  }
+
+  .header__nav h1{
+    white-space: nowrap;
+
+  }
+  
+  .header__nav__lista {
+    display: flex;
+    list-style: none;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    margin: 0;
+
+  }
+  
+  .header__nav__lista__item { 
+    margin-right: 20px;
+  }
+  
+  .header__nav__lista__item a {
+    text-align: center;
+    text-decoration: none;
+    padding: 8px;
+    display: block;
+    color: white;
+  }
+
+  .header__nav__lista__item a:hover{
+    background: #1565C0;
+  }
+  
+  /* Sección */
+  .seccion {
+    padding: 20px;
+  }
+  
+  .seccion__titulo {
+    margin-bottom: 10px;
+    color: #0A3871
+
+  }
+
+  .seccion__descripcion{
+    color: rgb(56, 56, 56);
+  }
+
+  .seccion__contenido {
+    display: flex;
+    align-items: center; /* Alinear verticalmente el contenido */
+    justify-content: flex-end; /* Alinear a la derecha */
+  }
+
+  .seccion__Redes{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+
+  /* Formacion */
+    .formaciones {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex-shrink: 0;
+      background: white;
+      padding: 20px;
+    }
+    
+    .formacion {
+      margin-bottom: 15px;
+      text-align: center;
+      padding: 2px;
+    }
+  
+    .formacion__titulo{
+      margin: 0;
+    }
+  
+    .formacion__descripcion{
+      margin: 3px;
+    }
+  
+    .formacion__imagen{
+      margin-bottom: 5px;
+      text-align: center;
+      align-items: baseline;
+      max-width: 148px;
+      max-height: 148px;
+    }
+
+    .formacion__imagen:hover{
+      animation: animacion-foto 1s ease-in; 
+    }
+
+    /* Competencias */
+    .competencias {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      flex-shrink: 0;
+      background: white;
+      padding: 20px;
+    }
+
+    .competencia {
+      margin-bottom: 15px;
+      text-align: center;
+    }
+  
+    .competencia__imagen{
+      margin-bottom: 5px;
+      text-align: center;
+      align-items: baseline;
+      max-width: 150px;
+      max-height: 150px;
+    }
+
+    .competencia__imagen:hover{
+      animation: animacion-foto 1s ease-in; 
+    }
+
+  /* Pasatiempos */
+  .pasatiempos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-shrink: 0;
+    background: white;
+    padding: 20px;
+  
+  }
+
+  .pasatiempo {
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .pasatiempo__imagen{
+    margin-bottom: 5px;
+    text-align: center;
+    align-items: baseline;
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .pasatiempo__imagen:hover{
+    animation: animacion-foto 1s ease-in; 
+  }
+
+  .pasatiempo__titulo{
+    margin: 0;
+  }
+  
+  /* Proyectos */
+  .proyectos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-shrink: 0;
+    
+  }
+  
+  .proyecto {
+    width: 75%; /* Ajustar ancho para tablets */
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .proyecto__titulo{
+    margin: 0;
+  }
+
+  .proyecto__descripcion{
+    margin: 3px;
+  }
+
+  .proyecto__imagen{
+    width: 90%; /* Ajustar ancho para tablets */
+    margin-bottom: 20px;
+    text-align: center;
+    align-items: baseline;
+  }
+
+  /* Foto */
+  .seccion__foto {
+    margin-right: auto; /* Alinear la foto a la derecha */
+  }
+  
+  .seccion__foto__imagen {
+    width: 150px; /* Ajustar el ancho de la foto */
+    height: 150px; /* Ajustar la altura de la foto */
+    border-radius: 50%; /* Convertir la foto en un círculo */
+    object-fit: cover; /* Mantener la proporción de la foto */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Agregar una sombra */
+    animation: animacion-foto 2s ease-in; /* Agregar la animación */
+  }
+  
+  @keyframes animacion-foto {
+    0% {
+      transform: scale(1); /* Tamaño inicial */
+    }
+    50% {
+      transform: scale(1.1); /* Tamaño máximo */
+    }
+    100% {
+      transform: scale(1); /* Tamaño inicial */
+    }
+  }
+
+  /* Media queries para inactivar h1 */
+  @media all and (max-width: 1005px) {
+
+    header{
+
+      h1{
+        display: none;
+      }
+    }
+
+    .header__nav{
+      justify-content: center;
+    }
+
+  }
+
+  /* Media queries para tablets */
+  @media all and (max-width: 800px) {
+
+    .header__nav{
+      justify-content: center;
+    }
+
+    header{
+
+      h1{
+        display: none;
+      }
+    }
+
+    .proyecto {
+      width: 100%; /* Ajustar ancho para tablets */
+    }
+
+    .seccion__foto {
+        margin-left: 0; /* Eliminar el margen lateral de la foto */
+        margin-top: 20px; /* Agregar un margen superior a la foto */
+      }
+  }
+  
+  /* Media queries para celulares */
+  @media (max-width: 600px) {
+
+    .header{
+
+      h1{
+        display: none;
+      }
+    }
+
+    .header__nav{
+      justify-content: center;
+    }
+
+    .header__nav__lista{
+      flex-flow: column wrap;
+    }
+
+    .header__nav__lista__item a {
+      text-align: center; 
+      padding: 10px;
+      border-top: 1px solid rgba(255, 255, 255,0.3); 
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+    }
+
+    .header__nav__lista__item:last-of-type a {
+      border-bottom: none;
+    }
+
+    .seccion__Redes{
+      justify-content: center;
+    }
+
+    .formacion__imagen{
+      max-width: 125px;
+    }
+
+    .competencia__imagen{
+      max-width: 125px;
+    }
+
+    .pasatiempo__imagen{
+      max-width: 125px;
+    }
+
+    .proyecto {
+      width: 100%; /* Ajustar ancho para celulares */
+    }
+
+    .seccion__foto__imagen {
+        width: 100px; /* Ajustar el ancho de la foto para celulares */
+        height: 100px; /* Ajustar la altura de la foto para celulares */
+      }
+
+  }
+  
+  /* Formulario */
+  .formulario {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 0 auto;
+    align-items: center;
+  }
+  
+  .formulario__etiqueta {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .formulario__input,
+  .formulario__textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .formulario__textarea {
+    height: 100px;
+  }
+  
+  .boton {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;  
+    background-color: #0A3871;
+    color: #fff;
+    border: none;
+    transition: 0.5s all;
+    cursor: pointer;
+  }
+
+  .boton:hover{
+    background: #1565C0;
+  }
+  
+  .boton--secondary {
+    background-color:#0A3871;
+    border-radius: 5px;  
+    cursor: pointer;
+    margin: 2px;
+    margin-bottom: 10px;
+  }
+
+  .boton--secondary:hover{
+    background: #1565C0;
+  }
+  
+  /* Media queries para formularios en celulares */
+  @media (max-width: 480px) {
+    
+    .formulario {
+      width: 80%; /* Ajustar ancho para celulares */
+    }
+  
+    .formulario__input,
+    .formulario__textarea {
+      margin-bottom: 5px; /* Ajustar margen para celulares */
+    }
+  }
+  
+  .footer{
+    text-align: center;
+    background: url(img/bg.jpg);
+    color: white;
+    padding: 20px;
+  }
+
+    #atribuciones{
+      margin:auto;
+    }
